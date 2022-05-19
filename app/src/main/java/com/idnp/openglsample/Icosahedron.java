@@ -49,32 +49,35 @@ public class Icosahedron {
     private ByteBuffer mIndexBuffer;
 
     private float vertices[] = {
-            0.f, -aP,   1,
+            0.f, -aP,   1,                  // Inicio               (0)
             0.f,  aP,   1,
             0.f,  aP,  -1,
-            0.f, -aP,  -1,
+            0.f, -aP,  -1,                  // Debe apuntar aqui    (3)
             1,   0,  aP,
             -1,   0,  aP,
-            -1,   0, -aP,
+            -1,   0, -aP,                    // Acá esta apuntando   (6)
             1,   0, -aP,
             aP,   1,   0,
             -aP,   1,   0,
-            -aP, - 1,   0,
+            -aP, - 1,   0,                  // Tope (10)
             aP, - 1,   0,
     };
+    // Rojo     1.0f,  0.0f,  0.0f
+    // Azul     0.0f,  0.0f,  1.0f
+    // Verde    0.0f,  1.0f,  0.0f
     private float colors[] = {
-            0.0f,  1.0f,  0.0f,  1.0f,
-            0.0f,  1.0f,  0.0f,  1.0f,
-            0.0f,  1.0f,  0.0f,  1.0f,
-            0.0f,  1.0f,  0.0f,  1.0f,
-            1.0f,  0.0f,  0.0f,  1.0f,
-            1.0f,  0.0f,  0.0f,  1.0f,
-            0.0f,  0.0f,  1.0f,  1.0f,
-            1.0f,  0.0f,  1.0f,  1.0f,
-            0.0f,  1.0f,  0.0f,  1.0f,
-            1.0f,  0.5f,  0.0f,  1.0f,
-            1.0f,  0.5f,  0.0f,  1.0f,
-            0.0f,  1.0f,  0.0f,  1.0f
+            0.0f,  0.2f,  1.0f,  1.0f,          // 00           x
+            0.0f,  0.5f,  0.2f,  1.0f,          // 01
+            0.0f,  0.7f,  1.0f,  1.0f,          // 02
+            0.0f,  1.0f,  0.7f,  1.0f,          // 03
+            0.4f,  0.5f,  0.3f,  1.0f,          // 04           x
+            0.5f,  0.0f,  0.2f,  1.0f,          // 05           x
+            0.6f,  0.2f,  0.9f,  1.0f,          // 06
+            0.8f,  1.0f,  0.4f,  1.0f,          // 07
+            1.0f,  0.0f,  0.2f,  1.0f,          // 08
+            1.0f,  0.6f,  0.6f,  1.0f,          // 09
+            1.0f,  0.8f,  0.9f,  1.0f,          // 10
+            1.0f,  1.0f,  0.7f,  1.0f           // 11
     };
 
     private byte indices[] = {
@@ -93,7 +96,7 @@ public class Icosahedron {
             6,9,2,
             10,6,9,
             10,3,6,
-            0,10,6,
+            0,10,3,
             0,3,11,
             11,3,7,
             3,6,7,
