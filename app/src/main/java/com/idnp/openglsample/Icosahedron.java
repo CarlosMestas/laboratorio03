@@ -27,23 +27,6 @@ public class Icosahedron {
 
     float aP = 1.618f;
 
-    private float u[] = {0.f, -aP,  1};
-    private float v[] = {0.f,  aP,  1};
-    private float w[] = {0.f,  aP, -1};
-    private float x[] = {0.f, -aP, -1};
-
-    private float y[] = { 1, 0,  aP};
-    private float z[] = {-1, 0,  aP};
-    private float a[] = {-1, 0, -aP};
-    private float b[] = { 1, 0, -aP};
-
-    private float c[] = { aP, 1,  0};
-    private float d[] = {-aP, 1,  0};
-    private float e[] = {-aP,-1,  0};
-    private float f[] = { aP,-1,  0};
-
-
-
     private FloatBuffer mVertexBuffer;
     private FloatBuffer mColorBuffer;
     private ByteBuffer mIndexBuffer;
@@ -64,9 +47,9 @@ public class Icosahedron {
     };
     private float colors[] = {
             0.0f,  1.0f,  0.0f,  1.0f,
+            1.0f,  1.0f,  1.0f,  0.0f, //white
             0.0f,  1.0f,  0.0f,  1.0f,
-            0.0f,  1.0f,  0.0f,  1.0f,
-            0.0f,  1.0f,  0.0f,  1.0f,
+            1.0f,  0.5f,  0.0f,  0.0f,
             1.0f,  0.0f,  0.0f,  1.0f,
             1.0f,  0.0f,  0.0f,  1.0f,
             0.0f,  0.0f,  1.0f,  1.0f,
@@ -74,7 +57,8 @@ public class Icosahedron {
             0.0f,  1.0f,  0.0f,  1.0f,
             1.0f,  0.5f,  0.0f,  1.0f,
             1.0f,  0.5f,  0.0f,  1.0f,
-            0.0f,  1.0f,  0.0f,  1.0f
+            0.0f,  1.0f,  0.0f,  1.0f,
+
     };
 
     private byte indices[] = {

@@ -12,8 +12,6 @@ class Cube {
     private FloatBuffer mColorBuffer;
     private ByteBuffer mIndexBuffer;
 
-    float aP = 1.618f;
-
     private float vertices[] = {
             -1.0f, -1.0f, -1.0f,
             1.0f, -1.0f, -1.0f,

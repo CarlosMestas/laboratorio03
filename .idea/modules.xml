@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/openglsample.iml" filepath="$PROJECT_DIR$/.idea/modules/openglsample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/openglsample.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/openglsample.app.iml" />
     </modules>
   </component>
 </project>
